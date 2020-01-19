@@ -17,6 +17,11 @@ if ('serviceWorker' in navigator) {
 // place your code below
 
 
-console.log(`Hello world!`);
+ const count = document.querySelector('.glass__count')
+ 
+ const add = document.querySelector('.button__add--js')
 
-
+/* const remove = document.querySelector('.button__remove--js')
+add.addEventListener ('click', (e) => {
+add.innerHTML.toggle('+1') 
+}
