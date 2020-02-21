@@ -14,6 +14,7 @@
 
 html {
   box-sizing: border-box;
+  background-color: #3767ad;
 }
 
 *,
@@ -29,6 +30,15 @@ body {
   align-items: center;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
+}
+.main__header  {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+color: whitesmoke;
+
+  
 }
 
 .button {
@@ -65,17 +75,64 @@ body {
     }
   }
 }
-.glass__count { 
-  position: absolute;
-  justify-content: center;
-  margin: auto;
+.glass{ 
   
+  
+  &__count { 
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
+ 
+  margin-top: -140px ;
+  
+  
+  background: none;
+  border: none;
   font-family: Roboto;
-  font-style: normal;
+
   font-weight: 500;
   font-size: 112px;
   line-height: 131px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  
+}
+.glass__yesterday{ 
+display: flex; 
+justify-content: left;
+align-items: center;
+scale: 0.5;
+ 
+}
+}
+
+.table {
+  display: grid; 
+  grid-template-areas: 
+  "caption caption"
+  "header header"
+  
+  "content content"; 
+  grid-template-columns: 200px 1 fr;
+  &__a {
+    grid-area: content;
+  }
+  &__b {
+    grid-area: content;
+  }
+&__caption {
+  grid-area: caption;
+}
+&list {
+  
+  background-color: whitesmoke;
+ 
+
+}
+&__yesterday {
+  grid-area: header; 
+  background-color: yellow;
+}
+&__today {
+  grid-area: header; 
+  background-color: yellowgreen;
+}
 }
