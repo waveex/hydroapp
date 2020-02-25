@@ -67,7 +67,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 48px;
-  transition: background 0.8s ease-in-out;
+  transition: background bump 0.8s ease-in-out;
   &__add {
     font-weight: bold;
     font-size: 14px;
