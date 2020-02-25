@@ -430,6 +430,10 @@ body {
       -webkit-transform: scale(1.01);
           -ms-transform: scale(1.01);
               transform: scale(1.01); }
+    .button__add:active {
+      -webkit-transform: bump;
+          -ms-transform: bump;
+              transform: bump; }
   .button__remove {
     margin-top: 37px;
     background: none;
