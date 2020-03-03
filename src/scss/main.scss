@@ -1,8 +1,9 @@
 @import "_normalize";
 @import "_variables";
+@import url("https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap");
 @keyframes Bump {
   0% {
-    transform: scale(1.5);
+    transform: scale(1.015);
   }
   50% {
     transform: scale(0.8);
@@ -11,6 +12,31 @@
     transform: scale(1);
   }
 }
+@keyframes wave {
+  0% {
+    transform: translateX(1px);
+  }
+  10% {
+    transform: translateX(4px);
+  } 
+25% {
+  transform: translateX(7px);
+}
+55% {
+  transform:translateX(4px);
+}
+75% {
+  transform:translateX(1px);
+}
+85% {
+  transform:translateX(-2px);
+}
+100% {
+  transform:translateX(1px);
+}
+
+  }
+
 
 html {
   box-sizing: border-box;
@@ -54,9 +80,7 @@ body {
   flex-direction: column;
   transform: scale(0.175);
   max-height: 98px;
- 
 
-   
   &__header {
     transform: scale(2);
     margin-bottom: 56px;
@@ -67,7 +91,8 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 48px;
-  transition: background bump 0.8s ease-in-out;
+  transition: background 2s ease-in-out;
+  
   &__add {
     font-weight: bold;
     font-size: 14px;
@@ -81,6 +106,10 @@ body {
     &:hover {
       background: #eafffd;
       transform: scale(1.01);
+      
+    }
+    &:active {
+      animation: Bump 2s ease-in-out;
     }
   }
   &__remove {
@@ -96,9 +125,9 @@ body {
   }
 }
 .glass {
-  &__count {
+  &__count, &__count-2{
     display: flex;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Odibee Sans', ;
     justify-content: center;
     margin-top: -140px;
     background: none;
@@ -108,11 +137,13 @@ body {
     font-size: 112px;
     line-height: 131px;
   }
-  .db {
-    display: flex;
-    justify-content: left;
-    align-items: center;
+  &__water{
+  animation: none;
+ 
   }
+   &__water--active {
+      animation: wave 1s ease-in-out;
+   }
 }
 
 .table {
