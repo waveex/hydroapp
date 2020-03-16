@@ -22,25 +22,21 @@ else {
    
   
 } 
-/*function waver(){
-   var i = 1; 
-   if( i==1) {
+function waver(){
+   water.classList.add("glass__water--active")
+   setTimeout(waver,1000)
+}
  
-  i++;
-   }
-   if(i ==2){
-    water.classList.remove("glass__water--active");
-   } 
-   return 0;
-}*/
-
 
 add.addEventListener('click', (e) => {
   e.preventDefault();
   localStorage.setItem(key, parseInt(localStorage.getItem(key)) + 1);
   count.innerHTML = localStorage.getItem(key); 
-  water.classList.add("glass__water--active");
+  waver()
+  const clearClass = () => water.classList.remove("glass_water--active");
+  setTimeout(() => clearClass(), 1000)
 })
+ 
  
 remove.addEventListener('click', (e) => {
   e.preventDefault();
